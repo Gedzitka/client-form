@@ -10,7 +10,7 @@ async function getUsers() {
   console.log(data);
 }
 
-class clients {
+class Clients {
 	constructor() {
 		const firstNameInput = document.getElementById('fname');
 		const lastNameInput = document.getElementById('lname');
@@ -64,19 +64,19 @@ _postClient(clientInfo) {
       
     
     _writeClient(data) {
-      const result = document.getElementById('section_table');
-      result.innerHTML = "";
-      const table = document.createElement("table");
-      const coption = document.createElement("caption");
-      coption.innerHTML = "POJIŠTĚNCI";
-      const thead = document.createElement("thead");
-      thead.innerHTML = ` <tr>
-     <th scope="col">Jméno a příjmeni</th>
-     <th scope="col">Telefon</th>
-     <th scope="col">Věk</th>
-        </tr>`;
-const tbody = document.createElement("tbody");
-data.results.forEach(client => {
+        const result = document.getElementById('section_table');
+        result.innerHTML = "";
+        const table = document.createElement("table");
+        const coption = document.createElement("caption");
+        coption.innerHTML = "POJIŠTĚNCI";
+        const thead = document.createElement("thead");
+        thead.innerHTML = ` <tr>
+            <th scope="col">Jméno a příjmeni</th>
+            <th scope="col">Telefon</th>
+            <th scope="col">Věk</th>
+            </tr>`;
+        const tbody = document.createElement("tbody");
+        data.results.forEach(client => {
             const tr = document.createElement("tr");
             tr.innerHTML = `
             <td data-label="Jméno a příjmeni">${firstName} ${lastName} </td>
